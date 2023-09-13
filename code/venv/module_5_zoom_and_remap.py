@@ -25,8 +25,6 @@ def zoom(img):
         elif chr(k) == 'o':
             img = cv.pyrDown(img, dstsize=(cols // 2, rows // 2))
 
-    cv.destroyAllWindows()
-
 
 def re_map(map_x, map_y, img):
     print("ESC - exit \nt - top-down rotate \nr - right-left rotate \n_______________")
@@ -56,9 +54,6 @@ def re_map(map_x, map_y, img):
 
         # use template maps to remap image
         img = cv.remap(img, map_x, map_y, cv.INTER_LINEAR)
-        cv.destroyAllWindows()
-
-    cv.destroyAllWindows()
 
 
 if __name__ == "__main__":
