@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # invert image
     gray = cv.bitwise_not(gray)
 
-    # add binary threshhold on image
+    # add binary threshold on image
     gray_thrash_binary = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C,
                                               cv.THRESH_BINARY, 11, -2)
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
     # decrease size of all objects on image
     horizontal = cv.erode(horizontal, horizontal_structure)
-    # increase size of all horisontal lines of objects on image
+    # increase size of all horizontal lines of objects on image
     horizontal = cv.dilate(horizontal, horizontal_structure)
 
     rows = vertical.shape[0]
